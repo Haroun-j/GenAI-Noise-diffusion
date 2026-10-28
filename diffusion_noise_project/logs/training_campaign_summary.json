@@ -1,0 +1,73 @@
+{
+  "noise_types": [
+    "gaussian",
+    "uniform",
+    "laplace"
+  ],
+  "experimental_controls": "Same architecture, optimizer, training budget, initialization seed, and data-order seed across all three runs.",
+  "config": {
+    "dataset": "MNIST",
+    "image_size": 28,
+    "channels": 1,
+    "batch_size": 256,
+    "T": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "schedule": "linear",
+    "num_epochs": 30,
+    "lr": 0.0002,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "model_channels": 64,
+    "channel_mults": [
+      1,
+      2,
+      4
+    ],
+    "log_every": 100,
+    "save_every": 5,
+    "seed": 42,
+    "sample_count": 64,
+    "gradient_clip": 1.0
+  },
+  "results": {
+    "gaussian": {
+      "run_label": "Gaussian (exact DDPM baseline)",
+      "training_objective": "Exact DDPM epsilon prediction under the standard Gaussian forward law.",
+      "final_epoch_avg_loss": 0.022038716593004288,
+      "duration_minutes": 23.118333333333332,
+      "peak_memory_gb": 2.2831764221191406,
+      "checkpoint_directory": "/content/drive/MyDrive/diffusion_noise_project/checkpoints/gaussian",
+      "loss_log_path": "/content/drive/MyDrive/diffusion_noise_project/logs/gaussian_loss.csv",
+      "tensorboard_dir": "/content/drive/MyDrive/diffusion_noise_project/tensorboard/gaussian",
+      "sample_path": "/content/drive/MyDrive/diffusion_noise_project/samples/gaussian_final.png",
+      "run_info_path": "/content/drive/MyDrive/diffusion_noise_project/logs/gaussian_run_info.json"
+    },
+    "uniform": {
+      "run_label": "Uniform (matched-variance surrogate)",
+      "training_objective": "Epsilon prediction under a matched-variance direct-corruption surrogate.",
+      "final_epoch_avg_loss": 0.018616491433312284,
+      "duration_minutes": 22.506666666666668,
+      "peak_memory_gb": 2.161346912384033,
+      "checkpoint_directory": "/content/drive/MyDrive/diffusion_noise_project/checkpoints/uniform",
+      "loss_log_path": "/content/drive/MyDrive/diffusion_noise_project/logs/uniform_loss.csv",
+      "tensorboard_dir": "/content/drive/MyDrive/diffusion_noise_project/tensorboard/uniform",
+      "sample_path": "/content/drive/MyDrive/diffusion_noise_project/samples/uniform_final.png",
+      "run_info_path": "/content/drive/MyDrive/diffusion_noise_project/logs/uniform_run_info.json"
+    },
+    "laplace": {
+      "run_label": "Laplace (matched-variance surrogate)",
+      "training_objective": "Epsilon prediction under a matched-variance direct-corruption surrogate.",
+      "final_epoch_avg_loss": 0.020451635799984984,
+      "duration_minutes": 22.53666666666667,
+      "peak_memory_gb": 2.161346912384033,
+      "checkpoint_directory": "/content/drive/MyDrive/diffusion_noise_project/checkpoints/laplace",
+      "loss_log_path": "/content/drive/MyDrive/diffusion_noise_project/logs/laplace_loss.csv",
+      "tensorboard_dir": "/content/drive/MyDrive/diffusion_noise_project/tensorboard/laplace",
+      "sample_path": "/content/drive/MyDrive/diffusion_noise_project/samples/laplace_final.png",
+      "run_info_path": "/content/drive/MyDrive/diffusion_noise_project/logs/laplace_run_info.json"
+    }
+  }
+}

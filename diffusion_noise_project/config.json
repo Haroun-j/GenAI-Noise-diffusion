@@ -1,0 +1,24 @@
+{
+  "dataset": "MNIST",
+  "image_size": 28,
+  "channels": 1,
+  "batch_size": 128,
+  "T": 1000,
+  "beta_start": 0.0001,
+  "beta_end": 0.02,
+  "schedule": "linear",
+  "num_epochs": 30,
+  "lr": 0.0002,
+  "optimizer": "adamw",
+  "weight_decay": 0.0001,
+  "num_workers": 2,
+  "model_channels": 64,
+  "channel_mults": [
+    1,
+    2,
+    4
+  ],
+  "log_every": 100,
+  "save_every": 5,
+  "seed": 42
+}

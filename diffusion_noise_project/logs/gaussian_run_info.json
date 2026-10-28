@@ -1,0 +1,42 @@
+{
+  "noise_type": "gaussian",
+  "run_label": "Gaussian (exact DDPM baseline)",
+  "training_objective": "Exact DDPM epsilon prediction under the standard Gaussian forward law.",
+  "sampler_note": "Reverse sampling still uses the standard Gaussian DDPM update. That update is exact for the Gaussian baseline and should be interpreted with caution for the surrogate runs.",
+  "experimental_controls": "Same architecture, optimizer, training budget, initialization seed, and data-order seed across all three runs.",
+  "config": {
+    "dataset": "MNIST",
+    "image_size": 28,
+    "channels": 1,
+    "batch_size": 256,
+    "T": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "schedule": "linear",
+    "num_epochs": 30,
+    "lr": 0.0002,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "model_channels": 64,
+    "channel_mults": [
+      1,
+      2,
+      4
+    ],
+    "log_every": 100,
+    "save_every": 5,
+    "seed": 42,
+    "sample_count": 64,
+    "gradient_clip": 1.0
+  },
+  "final_epoch_avg_loss": 0.022038716593004288,
+  "epochs_completed": 30,
+  "duration_minutes": 23.118333333333332,
+  "peak_memory_gb": 2.2831764221191406,
+  "checkpoint_directory": "/content/drive/MyDrive/diffusion_noise_project/checkpoints/gaussian",
+  "loss_log_path": "/content/drive/MyDrive/diffusion_noise_project/logs/gaussian_loss.csv",
+  "tensorboard_dir": "/content/drive/MyDrive/diffusion_noise_project/tensorboard/gaussian",
+  "sample_path": "/content/drive/MyDrive/diffusion_noise_project/samples/gaussian_final.png"
+}

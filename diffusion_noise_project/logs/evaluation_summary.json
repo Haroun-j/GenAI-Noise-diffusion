@@ -1,0 +1,64 @@
+{
+  "available_runs": [
+    "gaussian",
+    "laplace",
+    "uniform"
+  ],
+  "missing_runs": [],
+  "full_comparison_ready": true,
+  "sampler_note": "Notebook 5 uses the standard Gaussian DDPM reverse sampler for all runs.",
+  "shared_controls_verified": true,
+  "control_reference": {
+    "batch_size": 256,
+    "T": 1000,
+    "lr": 0.0002,
+    "num_epochs": 30,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "model_channels": 64,
+    "channel_mults": [
+      1,
+      2,
+      4
+    ],
+    "seed": 42
+  },
+  "metrics": {
+    "gaussian": {
+      "final_epoch_avg_loss": 0.022038716593004288,
+      "half_loss_epoch": 2,
+      "run_label": "Gaussian (exact DDPM baseline)",
+      "checkpoint": "epoch_030.pt",
+      "duration_minutes": 23.118333333333332,
+      "peak_memory_gb": 2.2831764221191406,
+      "avg_denoising_mse": 0.02258175812039514,
+      "mse_t500": 0.013448433065158315,
+      "mse_t999": 0.0004398826135948184,
+      "sample_variance": 0.2929328680038452
+    },
+    "uniform": {
+      "final_epoch_avg_loss": 0.018616491433312284,
+      "half_loss_epoch": 2,
+      "run_label": "Uniform (matched-variance surrogate)",
+      "checkpoint": "epoch_030.pt",
+      "duration_minutes": 22.506666666666668,
+      "peak_memory_gb": 2.161346912384033,
+      "avg_denoising_mse": 0.01947282562587319,
+      "mse_t500": 0.0073886912310845215,
+      "mse_t999": 9.602392565429909e-05,
+      "sample_variance": 0.4787623882293701
+    },
+    "laplace": {
+      "final_epoch_avg_loss": 0.020451635799984984,
+      "half_loss_epoch": 2,
+      "run_label": "Laplace (matched-variance surrogate)",
+      "checkpoint": "epoch_030.pt",
+      "duration_minutes": 22.53666666666667,
+      "peak_memory_gb": 2.161346912384033,
+      "avg_denoising_mse": 0.020920601747757145,
+      "mse_t500": 0.010911921650124714,
+      "mse_t999": 0.00012641027691424824,
+      "sample_variance": 0.4862247407436371
+    }
+  }
+}
