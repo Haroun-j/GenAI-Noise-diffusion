@@ -1,0 +1,113 @@
+{
+  "device": "cpu",
+  "classifier_checkpoint": "diffusion_noise_project/research_extension/classifier/mnist_classifier.pt",
+  "feature_bank_size": 60000,
+  "runs": {
+    "gaussian": {
+      "sample_grid": "diffusion_noise_project/samples/gaussian_final.png",
+      "avg_confidence": 0.7750523090362549,
+      "avg_nn_distance": 11.734539985656738,
+      "matched_label_histogram": [
+        1,
+        11,
+        7,
+        5,
+        6,
+        8,
+        5,
+        5,
+        8,
+        8
+      ],
+      "matched_label_coverage": 10,
+      "matched_label_entropy": 2.2089308716977163,
+      "prediction_match_rate": 0.734375,
+      "top_matched_labels": [
+        {
+          "digit": 1,
+          "count": 11
+        },
+        {
+          "digit": 5,
+          "count": 8
+        },
+        {
+          "digit": 8,
+          "count": 8
+        }
+      ],
+      "montage_path": "research_extension_output/figures/nearest_neighbor_gaussian.png"
+    },
+    "laplace": {
+      "sample_grid": "diffusion_noise_project/samples/laplace_final.png",
+      "avg_confidence": 0.8360364437103271,
+      "avg_nn_distance": 13.519326210021973,
+      "matched_label_histogram": [
+        7,
+        4,
+        11,
+        13,
+        5,
+        3,
+        5,
+        1,
+        9,
+        6
+      ],
+      "matched_label_coverage": 10,
+      "matched_label_entropy": 2.1463278937129777,
+      "prediction_match_rate": 0.734375,
+      "top_matched_labels": [
+        {
+          "digit": 3,
+          "count": 13
+        },
+        {
+          "digit": 2,
+          "count": 11
+        },
+        {
+          "digit": 8,
+          "count": 9
+        }
+      ],
+      "montage_path": "research_extension_output/figures/nearest_neighbor_laplace.png"
+    },
+    "uniform": {
+      "sample_grid": "diffusion_noise_project/samples/uniform_final.png",
+      "avg_confidence": 0.7338932156562805,
+      "avg_nn_distance": 14.651510238647461,
+      "matched_label_histogram": [
+        2,
+        2,
+        19,
+        14,
+        2,
+        6,
+        6,
+        2,
+        10,
+        1
+      ],
+      "matched_label_coverage": 10,
+      "matched_label_entropy": 1.9250817517357242,
+      "prediction_match_rate": 0.6875,
+      "top_matched_labels": [
+        {
+          "digit": 2,
+          "count": 19
+        },
+        {
+          "digit": 3,
+          "count": 14
+        },
+        {
+          "digit": 8,
+          "count": 10
+        }
+      ],
+      "montage_path": "research_extension_output/figures/nearest_neighbor_uniform.png"
+    }
+  },
+  "overview_figure": "research_extension_output/figures/nearest_neighbor_overview.png"
+}

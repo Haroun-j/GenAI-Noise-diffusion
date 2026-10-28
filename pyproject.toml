@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genai-noise-diffusion"
+version = "0.1.0"
+description = "Audit tooling for the diffusion noise study (manifest, sample audits, training dynamics, Gradio explorer)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pillow>=10.0",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+app = [
+  "gradio>=5.0",
+  "pandas>=2.0",
+]
+eval = [
+  "torch>=2.0",
+  "torchvision>=0.15",
+]
+all = [
+  "gradio>=5.0",
+  "pandas>=2.0",
+  "torch>=2.0",
+  "torchvision>=0.15",
+]
+
+[project.scripts]
+genai-research = "research_extension.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["research_extension*"]

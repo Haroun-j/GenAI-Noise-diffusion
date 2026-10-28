@@ -1,0 +1,243 @@
+{
+  "device": "cpu",
+  "classifier_checkpoint": "diffusion_noise_project/research_extension/classifier/mnist_classifier.pt",
+  "artifacts_root": "diffusion_noise_project",
+  "runs": {
+    "gaussian": {
+      "sample_grid": "diffusion_noise_project/samples/gaussian_final.png",
+      "num_tiles": 64,
+      "avg_confidence": 0.7750523090362549,
+      "std_confidence": 0.2294718623161316,
+      "predicted_class_histogram": [
+        3,
+        8,
+        6,
+        7,
+        7,
+        6,
+        6,
+        6,
+        8,
+        7
+      ],
+      "class_coverage": 10,
+      "prediction_entropy": 2.2771136782890995,
+      "top_classes": [
+        {
+          "digit": 1,
+          "count": 8
+        },
+        {
+          "digit": 8,
+          "count": 8
+        },
+        {
+          "digit": 3,
+          "count": 7
+        }
+      ],
+      "prototype_mse": 0.06072036921977997,
+      "feature_diversity_l2": 27.507814407348633,
+      "foreground_ratio": 0.9733139349489796,
+      "sharpness_score": 0.10403455549385399
+    },
+    "laplace": {
+      "sample_grid": "diffusion_noise_project/samples/laplace_final.png",
+      "num_tiles": 64,
+      "avg_confidence": 0.8360364437103271,
+      "std_confidence": 0.16593676805496216,
+      "predicted_class_histogram": [
+        5,
+        1,
+        11,
+        9,
+        5,
+        4,
+        7,
+        2,
+        11,
+        9
+      ],
+      "class_coverage": 10,
+      "prediction_entropy": 2.144024327626176,
+      "top_classes": [
+        {
+          "digit": 2,
+          "count": 11
+        },
+        {
+          "digit": 8,
+          "count": 11
+        },
+        {
+          "digit": 3,
+          "count": 9
+        }
+      ],
+      "prototype_mse": 0.0781593844294548,
+      "feature_diversity_l2": 30.191701889038086,
+      "foreground_ratio": 0.9389150191326531,
+      "sharpness_score": 0.13070209929719567
+    },
+    "uniform": {
+      "sample_grid": "diffusion_noise_project/samples/uniform_final.png",
+      "num_tiles": 64,
+      "avg_confidence": 0.7338932156562805,
+      "std_confidence": 0.24213646352291107,
+      "predicted_class_histogram": [
+        2,
+        1,
+        18,
+        14,
+        3,
+        9,
+        1,
+        5,
+        11,
+        0
+      ],
+      "class_coverage": 9,
+      "prediction_entropy": 1.8486536420928128,
+      "top_classes": [
+        {
+          "digit": 2,
+          "count": 18
+        },
+        {
+          "digit": 3,
+          "count": 14
+        },
+        {
+          "digit": 8,
+          "count": 11
+        }
+      ],
+      "prototype_mse": 0.09753730148077011,
+      "feature_diversity_l2": 27.22954559326172,
+      "foreground_ratio": 0.9557158801020408,
+      "sharpness_score": 0.20040039904415607
+    }
+  },
+  "rankings": {
+    "avg_confidence": [
+      {
+        "rank": 1,
+        "noise_type": "laplace",
+        "value": 0.8360364437103271,
+        "label": "Average classifier confidence"
+      },
+      {
+        "rank": 2,
+        "noise_type": "gaussian",
+        "value": 0.7750523090362549,
+        "label": "Average classifier confidence"
+      },
+      {
+        "rank": 3,
+        "noise_type": "uniform",
+        "value": 0.7338932156562805,
+        "label": "Average classifier confidence"
+      }
+    ],
+    "class_coverage": [
+      {
+        "rank": 1,
+        "noise_type": "gaussian",
+        "value": 10.0,
+        "label": "Predicted class coverage"
+      },
+      {
+        "rank": 2,
+        "noise_type": "laplace",
+        "value": 10.0,
+        "label": "Predicted class coverage"
+      },
+      {
+        "rank": 3,
+        "noise_type": "uniform",
+        "value": 9.0,
+        "label": "Predicted class coverage"
+      }
+    ],
+    "prediction_entropy": [
+      {
+        "rank": 1,
+        "noise_type": "gaussian",
+        "value": 2.2771136782890995,
+        "label": "Prediction entropy"
+      },
+      {
+        "rank": 2,
+        "noise_type": "laplace",
+        "value": 2.144024327626176,
+        "label": "Prediction entropy"
+      },
+      {
+        "rank": 3,
+        "noise_type": "uniform",
+        "value": 1.8486536420928128,
+        "label": "Prediction entropy"
+      }
+    ],
+    "prototype_mse": [
+      {
+        "rank": 1,
+        "noise_type": "gaussian",
+        "value": 0.06072036921977997,
+        "label": "Prototype MSE"
+      },
+      {
+        "rank": 2,
+        "noise_type": "laplace",
+        "value": 0.0781593844294548,
+        "label": "Prototype MSE"
+      },
+      {
+        "rank": 3,
+        "noise_type": "uniform",
+        "value": 0.09753730148077011,
+        "label": "Prototype MSE"
+      }
+    ],
+    "feature_diversity_l2": [
+      {
+        "rank": 1,
+        "noise_type": "laplace",
+        "value": 30.191701889038086,
+        "label": "Feature diversity"
+      },
+      {
+        "rank": 2,
+        "noise_type": "gaussian",
+        "value": 27.507814407348633,
+        "label": "Feature diversity"
+      },
+      {
+        "rank": 3,
+        "noise_type": "uniform",
+        "value": 27.22954559326172,
+        "label": "Feature diversity"
+      }
+    ],
+    "sharpness_score": [
+      {
+        "rank": 1,
+        "noise_type": "uniform",
+        "value": 0.20040039904415607,
+        "label": "Sharpness score"
+      },
+      {
+        "rank": 2,
+        "noise_type": "laplace",
+        "value": 0.13070209929719567,
+        "label": "Sharpness score"
+      },
+      {
+        "rank": 3,
+        "noise_type": "gaussian",
+        "value": 0.10403455549385399,
+        "label": "Sharpness score"
+      }
+    ]
+  }
+}
