@@ -1,0 +1,21 @@
+{
+  "num_sessions": 1440,
+  "sequence_length": 128,
+  "feature_names": [
+    "soc",
+    "voltage",
+    "current",
+    "temperature"
+  ],
+  "split_sizes": {
+    "train": 1007,
+    "val": 217,
+    "test": 216
+  },
+  "regime_counts": {
+    "gaussian": 480,
+    "uniform": 480,
+    "laplace": 480
+  },
+  "average_shock_steps": 6.817361111111111
+}

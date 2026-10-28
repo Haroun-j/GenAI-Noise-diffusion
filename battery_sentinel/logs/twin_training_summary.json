@@ -1,0 +1,123 @@
+{
+  "train_config": {
+    "seed": 42,
+    "window": 24,
+    "stride_train": 4,
+    "stride_eval": 2,
+    "batch_size": 256,
+    "hidden_dim": 64,
+    "num_layers": 2,
+    "dropout": 0.1,
+    "num_epochs": 12,
+    "lr": 0.001,
+    "weight_decay": 1e-05
+  },
+  "dataset_audit": {
+    "train_windows_total": 26182,
+    "train_windows_nominal_only": 8840,
+    "val_windows_nominal_only": 3328,
+    "test_windows_total": 11232
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5155917976583754,
+      "val_loss": 0.08569538220763206,
+      "elapsed_s": 1.1016123294830322
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.05365239174238273,
+      "val_loss": 0.038820930398427524,
+      "elapsed_s": 1.3692045211791992
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.03136851196842534,
+      "val_loss": 0.028464602951246958,
+      "elapsed_s": 1.6547551155090332
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.025160219041364534,
+      "val_loss": 0.02285605353804735,
+      "elapsed_s": 1.961881160736084
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.02095055508294276,
+      "val_loss": 0.01874055075817383,
+      "elapsed_s": 2.235004425048828
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.01842696890234947,
+      "val_loss": 0.01620778563217475,
+      "elapsed_s": 2.503683567047119
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.016618648171424867,
+      "val_loss": 0.014316478529228615,
+      "elapsed_s": 2.7890546321868896
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.015534845393683229,
+      "val_loss": 0.013154251894985255,
+      "elapsed_s": 3.048600196838379
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.01463049410709313,
+      "val_loss": 0.012297685902852278,
+      "elapsed_s": 3.323920249938965
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.01386261475937707,
+      "val_loss": 0.01162308153624718,
+      "elapsed_s": 3.610226631164551
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.01328761111944914,
+      "val_loss": 0.011251218975163423,
+      "elapsed_s": 3.920550584793091
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.012778555269220046,
+      "val_loss": 0.01102564695219581,
+      "elapsed_s": 4.14043116569519
+    }
+  ],
+  "test_metrics": [
+    {
+      "regime": "gaussian",
+      "mae_soc": 0.004711762070655823,
+      "mae_voltage": 0.05226010084152222,
+      "mae_temperature": 0.112112857401371,
+      "rmse_joint": 0.10799302160739899,
+      "num_windows": 3952
+    },
+    {
+      "regime": "uniform",
+      "mae_soc": 0.0046562310308218,
+      "mae_voltage": 0.05505695566534996,
+      "mae_temperature": 0.1248222067952156,
+      "rmse_joint": 0.1187032014131546,
+      "num_windows": 3640
+    },
+    {
+      "regime": "laplace",
+      "mae_soc": 0.004681453574448824,
+      "mae_voltage": 0.07059250771999359,
+      "mae_temperature": 0.2726849317550659,
+      "rmse_joint": 0.24446377158164978,
+      "num_windows": 3640
+    }
+  ],
+  "model_path": "/content/drive/MyDrive/battery_sentinel/models/battery_twin_gru.pt",
+  "scaler_path": "/content/drive/MyDrive/battery_sentinel/models/battery_twin_scalers.npz"
+}

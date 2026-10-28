@@ -1,0 +1,14 @@
+{
+  "project_layers": {
+    "foundational_study": "Notebooks 1 to 6",
+    "applied_system": "Notebooks 7 to 10"
+  },
+  "battery_sentinel_outputs": {
+    "simulation_summary": "/content/drive/MyDrive/battery_sentinel/logs/simulation_summary.json",
+    "twin_training_summary": "/content/drive/MyDrive/battery_sentinel/logs/twin_training_summary.json",
+    "router_metrics": "/content/drive/MyDrive/battery_sentinel/logs/router_metrics.json",
+    "dashboard_figure": "/content/drive/MyDrive/battery_sentinel/figures/battery_sentinel_dashboard.png"
+  },
+  "router_macro_f1": 0.9990325094806094,
+  "baseline_binary_f1": 0.33059894370153947
+}

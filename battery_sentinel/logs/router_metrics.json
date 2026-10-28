@@ -1,0 +1,167 @@
+{
+  "router_config": {
+    "seed": 42,
+    "window": 24,
+    "stride": 2,
+    "selection_holdout": 0.2,
+    "nominal_threshold_quantile": 0.95,
+    "label_order": [
+      "gaussian",
+      "uniform",
+      "laplace"
+    ]
+  },
+  "selected_model": "random_forest",
+  "model_selection": [
+    {
+      "model": "random_forest",
+      "macro_f1": 0.9995544340630612,
+      "accuracy": 0.9995569339831635
+    },
+    {
+      "model": "extra_trees",
+      "macro_f1": 0.9995544340630612,
+      "accuracy": 0.9995569339831635
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "macro_f1": 0.9991090135683333,
+      "accuracy": 0.999113867966327
+    },
+    {
+      "model": "logistic_regression",
+      "macro_f1": 0.9973287611008529,
+      "accuracy": 0.997341603898981
+    }
+  ],
+  "sigma": [
+    0.007027081213891506,
+    0.11997069418430328,
+    0.1894109547138214
+  ],
+  "uniform_half_width": [
+    0.014131203293800354,
+    0.11413930356502533,
+    0.40032801032066345
+  ],
+  "laplace_scale": [
+    0.005897912196815014,
+    0.07161656022071838,
+    0.3481060266494751
+  ],
+  "macro_f1": 0.9990325094806094,
+  "weighted_f1": 0.9990206916054376,
+  "accuracy": 0.9990206552706553,
+  "likelihood_macro_f1": 0.3513805117113786,
+  "baseline_binary_f1": 0.33059894370153947,
+  "classification_report": {
+    "gaussian": {
+      "precision": 0.9994930291508238,
+      "recall": 0.9977226720647774,
+      "f1-score": 0.9986070659744206,
+      "support": 3952.0
+    },
+    "uniform": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 3640.0
+    },
+    "laplace": {
+      "precision": 0.9975322182615849,
+      "recall": 0.9994505494505495,
+      "f1-score": 0.9984904624674077,
+      "support": 3640.0
+    },
+    "accuracy": 0.9990206552706553,
+    "macro avg": {
+      "precision": 0.9990084158041362,
+      "recall": 0.999057740505109,
+      "f1-score": 0.9990325094806094,
+      "support": 11232.0
+    },
+    "weighted avg": {
+      "precision": 0.9990218772859887,
+      "recall": 0.9990206552706553,
+      "f1-score": 0.9990206916054376,
+      "support": 11232.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      3943,
+      0,
+      9
+    ],
+    [
+      0,
+      3640,
+      0
+    ],
+    [
+      2,
+      0,
+      3638
+    ]
+  ],
+  "label_order": [
+    "gaussian",
+    "uniform",
+    "laplace"
+  ],
+  "action_counts": {
+    "monitor_normal_operation": 3945,
+    "raise_inspection_alert": 3647,
+    "request_higher_resolution_telemetry": 3640
+  },
+  "top_feature_importances": [
+    {
+      "feature": "std_abs_diff_temperature",
+      "importance": 0.1302494131333409
+    },
+    {
+      "feature": "mean_abs_diff_temperature",
+      "importance": 0.12992086562835836
+    },
+    {
+      "feature": "max_abs_diff_temperature",
+      "importance": 0.10337635197242495
+    },
+    {
+      "feature": "mean_grid_dist_soc",
+      "importance": 0.06410601325029935
+    },
+    {
+      "feature": "mean_grid_dist_temperature",
+      "importance": 0.06359483298638283
+    },
+    {
+      "feature": "mean_grid_dist_voltage",
+      "importance": 0.05849254158473604
+    },
+    {
+      "feature": "target_grid_dist_temperature",
+      "importance": 0.053024687299980264
+    },
+    {
+      "feature": "mean_grid_dist_current",
+      "importance": 0.047226471677184315
+    },
+    {
+      "feature": "target_grid_dist_voltage",
+      "importance": 0.04616948033452561
+    },
+    {
+      "feature": "grid_hit_ratio_current",
+      "importance": 0.04357021389180445
+    },
+    {
+      "feature": "grid_hit_ratio_soc",
+      "importance": 0.03904969474046512
+    },
+    {
+      "feature": "flat_ratio_temperature",
+      "importance": 0.038013453155946224
+    }
+  ]
+}
